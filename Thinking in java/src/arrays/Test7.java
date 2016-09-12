@@ -2,7 +2,7 @@ package arrays;
 
 import java.util.Arrays;
 
-public class Test7 {
+public class Test7 { //test
 	static BerylliumSphere[][][] fill(int xLen, int yLen, int zLen) {
 		BerylliumSphere[][][] array = new BerylliumSphere[xLen][yLen][zLen];
 		for(int i = 0; i < array.length; i++) {
