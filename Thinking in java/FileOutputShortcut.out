@@ -1,0 +1,23 @@
+1: package io;
+2: 
+3: import java.io.BufferedReader;
+4: import java.io.IOException;
+5: import java.io.PrintWriter;
+6: import java.io.StringReader;
+7: 
+8: public class FileOutputShortcut {
+9: 	static String file = "FileOutputShortcut.out";
+10: 	public static void main(String[] args) throws IOException {
+11: 		BufferedReader in = new BufferedReader(
+12: 				new StringReader(
+13: 						BufferedInputFile.read("H:\\git\\Thinking in java learning notes\\Thinking in java\\src\\io\\FileOutputShortcut.java")));
+14: 		PrintWriter out = new PrintWriter(file);
+15: 		int lineNumber = 1;
+16: 		String s;
+17: 		while((s = in.readLine()) != null) {
+18: 			out.println(lineNumber++ + ": " + s);
+19: 		}
+20: 		out.close();
+21: 		System.out.println(BufferedInputFile.read(file));
+22: 	}
+23: }
